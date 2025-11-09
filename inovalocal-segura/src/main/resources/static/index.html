@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InovaLocal - Ocorrências</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/a2d2a6cfb3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header class="main-header">
+    <div class="header-content">
+        <h1><i class="fa-solid fa-building-shield"></i> InovaLocal</h1>
+        <p>Gestão Inteligente de Ocorrências</p>
+    </div>
+</header>
+<main class="container"> <!-- Usuários -->
+    <section class="section-card">
+        <div class="section-header"> <i class="fa-solid fa-users section-icon"></i>
+            <h2>Gerenciar Usuários</h2>
+        </div>
+        <form id="user-form" class="form-grid"> <input type="text" id="user-name" placeholder="Nome" required>
+            <input type="email" id="user-email" placeholder="Email" required> <select id="user-role" required>
+                <option value="" disabled selected>Selecione a função</option>
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+            </select> <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i> Salvar
+                Usuário</button> </form>
+        <div id="user-list" class="user-list"></div>
+    </section> <!-- Ocorrências -->
+    <section class="section-card">
+        <div class="section-header"> <i class="fa-solid fa-clipboard-list section-icon"></i>
+            <h2>Gerenciar Ocorrências</h2>
+        </div>
+        <form id="occurrence-form" class="form-grid"> <input type="text" id="occ-title" placeholder="Título"
+                                                             required> <textarea id="occ-description" placeholder="Descrição" required></textarea> <input
+                type="text" id="occ-category" placeholder="Categoria" required> <input type="number"
+                                                                                       id="occ-reporter" placeholder="ID do Usuário" required> <button type="submit"
+                                                                                                                                                       class="btn btn-primary"><i class="fa-solid fa-plus"></i> Salvar Ocorrência</button> </form>
+        <h3 class="table-title" style="margin-top:32px">Lista de Ocorrências</h3>
+        <div class="table-container">
+            <table id="occurrence-table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Categoria</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+<div id="toast" class="toast hidden"></div>
+<script src="script.js"></script>
+</body>
+
+</html>

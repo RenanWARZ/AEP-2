@@ -1,0 +1,403 @@
+:root {
+    --primary-color: #1e88e5;
+    --primary-dark: #1565c0;
+    --accent-green: #43a047;
+    --accent-red: #e53935;
+    --accent-orange: #fb8c00;
+    --background: #f5f8fc;
+    --card-bg: #ffffff;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --border-color: #e3e9ef;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-image: url('img/Maringa_City.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* HEADER */
+header.main-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: #fff;
+    padding: 2rem 0;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+/* SECTION CARD */
+.section-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.section-icon {
+    font-size: 1.7rem;
+    color: var(--primary-color);
+}
+
+/* FORM GRID */
+.form-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    background: #fafbfc;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(30,136,229,0.15);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* BUTTONS */
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: #fff;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-edit {
+    background: var(--accent-orange);
+    color: #fff;
+}
+
+.btn-delete {
+    background: var(--accent-red);
+    color: #fff;
+}
+
+.btn-close {
+    background: var(--accent-green);
+    color: ##c60000;
+}
+
+.btn-edit:hover, .btn-delete:hover, .btn-close:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+/* Botão Info */
+.btn-info {
+    background: linear-gradient(135deg, #42a5f5, #1e88e5);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.25s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-info:hover {
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-info i {
+    font-size: 0.9rem;
+}
+
+
+/* USER LIST */
+.user-item {
+    background: #f9fafb;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.user-item:hover {
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+    transform: translateX(4px);
+}
+
+.user-info h4 {
+    font-weight: 600;
+}
+
+.user-role {
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.role-admin {
+    background: rgba(30,136,229,0.1);
+    color: var(--primary-color);
+}
+
+.role-user {
+    background: rgba(76,175,80,0.1);
+    color: var(--accent-green);
+}
+
+/* TABLE */
+.table-container {
+    margin-top: 1rem;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+thead {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: #fff;
+}
+
+thead th {
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+tbody td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:hover {
+    background: rgba(30,136,229,0.05);
+}
+
+/* STATUS */
+.status-badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-open {
+    background: rgba(76,175,80,0.1);
+    color: var(--accent-green);
+}
+
+.status-closed {
+    background: rgba(229,57,53,0.1);
+    color: var(--accent-red);
+}
+
+/* TOAST */
+.toast {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 300px;
+    transform: translateX(400px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 1000;
+}
+
+.toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.toast-success {
+    border-left: 4px solid var(--accent-green);
+}
+
+.toast-error {
+    border-left: 4px solid var(--accent-red);
+}
+
+.toast-message {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-card {
+        padding: 1.5rem;
+    }
+
+    .user-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* === Botões de ação (Editar / Excluir / Fechar) === */
+.action-buttons button,
+.btn-edit,
+.btn-delete,
+.btn-close {
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Editar */
+.btn-edit {
+    background: linear-gradient(135deg, #ffa726, #fb8c00);
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background: linear-gradient(135deg, #fb8c00, #ef6c00);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Excluir */
+.btn-delete {
+    background: linear-gradient(135deg, #ef5350, #e53935);
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background: linear-gradient(135deg, #e53935, #c62828);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Fechar (verde) */
+.btn-close {
+    background: linear-gradient(135deg, #66bb6a, #43a047);
+    color: #fff;
+}
+
+.btn-close:hover {
+    background: linear-gradient(135deg, #43a047, #2e7d32);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Ícones dentro dos botões */
+.btn-edit i, .btn-delete i, .btn-close i {
+    font-size: 0.9rem;
+}
